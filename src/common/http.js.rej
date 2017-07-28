@@ -1,0 +1,9 @@
+diff a/src/common/http.js b/src/common/http.js	(rejected hunks)
+@@ -9,7 +9,6 @@
+         console.warn("è¯·ä¼ å…¥è¯·æ±‚åœ°å€");
+         return;
+     }
+-
+     const instance = params.instance,
+         url = params.url,
+         type = (params.type == undefined) ? "get" : params.type,

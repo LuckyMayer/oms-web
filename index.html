@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html style="height:100%;">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+	<title>乐其OMS管理系统</title>
+
+	<link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="./lib/font-awesome/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_n33pw0s9gig4x6r.css" />
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_sc3kfecfeh6hto6r.css" />
+    <link rel="stylesheet" href="./lib/adminLTE/css/AdminLTE.css"/>
+    <!-- <link rel="stylesheet" href="./lib/adminLTE/css/skins/skin-blue.css"／> -->
+    <link rel="stylesheet" href="./lib/autocomplete/autocomplete.css" />
+    <link rel="stylesheet" href="./lib/daterangepicker/daterangepicker.css">
+    <!-- 下拉多选 -->
+    <link href="https://cdn.bootcss.com/bootstrap-select/2.0.0-beta1/css/bootstrap-select.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./lib/ztree/css/zTreeStyle/zTreeStyle.css">
+    <link rel="stylesheet" href="./src/css/common.css">
+</head>
+<body class="hold-transition fixed skin-blue sidebar-mini" style="height:100%;">
+	<div id="root"></div>
+
+	<!-- 第三方依赖库 -->
+	<script src="./lib/jquery/jquery-2.2.0.min.js"></script>
+	<script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+	<script src="./lib/slimScroll/jquery.slimscroll.min.js"></script>
+	<script src="./lib/adminLTE/js/app.min.js"></script>
+	<!-- End 第三方依赖库 -->
+
+	<!-- js插件 -->
+	<script src="./lib/layer/layer.js"></script>
+	<script src="./src/common/common.js"></script>
+	<script src="./lib/laydate/laydate.js"></script>
+	<script src="./lib/ztree/ztree.js"></script>
+	<!-- <script src="./lib/jquery-autocomplete/autocomplete.js"></script> -->
+	<script src="./lib/autocomplete/autocomplete.js"></script>
+  <!-- 下拉多选 -->
+  <script src="https://cdn.bootcss.com/bootstrap-select/2.0.0-beta1/js/bootstrap-select.min.js"></script>
+  <script src="https://cdn.bootcss.com/bootstrap-select/2.0.0-beta1/js/i18n/defaults-zh_CN.min.js"></script>
+
+	<script src="./lib/daterangepicker/moment.js"></script>
+	<script src="./lib/daterangepicker/daterangepicker.js"></script>
+
+<!-- 	<script src="./lib/jquery-file-upload/jquery.ui.widget.js"></script>
+	<script src="./lib/jquery-file-upload/jquery.iframe-transport.js"></script>
+	<script src="./lib/jquery-file-upload/jquery.fileupload.js"></script> -->
+	<!-- End js插件 -->
+
+	<!-- webpack自动构建生成包 -->
+    <script src="./dist/bundle.js"></script>
+</body>
+<script>
+function showMessage(obj,type) {  if(typeof(obj)==="string"||typeof(obj)==="number"){   console.log(obj);  return ;  }
+  if(typeof(type)!='undefined'){   console.log(JSON.stringify(obj));  return ;  }  console.log('{\n'+ergodic(obj, "")+'}\n'); }
+function ergodic(obj,indentation){  var str='';  var indent = "     " + indentation; if(typeof(obj)==="object"){  
+  for(var p in obj){  if(typeof(obj[p])==="object"){ str+=indent + "["+p+"] => "+typeof(obj)+"\n"+indent + "{\n"+ergodic(obj[p], indent)+indent + "}\n";  } else {   if(typeof(obj[p])!=="string"){   str+=indent + "["+p+"] => "+obj[p]+"\n";   
+    }else{   str+=indent + "["+p+"] => '"+obj[p]+"'\n";    } }  }  return str;
+  }else{  console.log("非object类型。类型："+typeof(obj)+",值："+obj);  } }
+</script>
+</html>

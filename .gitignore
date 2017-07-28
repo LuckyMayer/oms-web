@@ -1,0 +1,6 @@
+config/
+.project
+node_modules/
+
+/build.xml
+/dump.rdb
